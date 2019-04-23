@@ -4,14 +4,17 @@ document.write("<object id=\"LODOP_OB\" "
     + "width=\"0\" height=\"0\">"
     + "<embed id=\"LODOP_EM\" type=\"application/x-print-lodop\" "
     + "width=0 height=0></embed></object>");
+
 //打印控件
 var LODOP;
+
 //获取控件实例
 if (navigator.appVersion.indexOf("MSIE") >= 0 || navigator.appVersion.indexOf("Trident") >= 0) {
     LODOP = document.getElementById('LODOP_OB');
 } else {
     LODOP = document.getElementById('LODOP_EM');
 }
+
 function checkPrint() {
     if (LODOP == null || typeof(LODOP.VERSION) == "undefined" || LODOP.VERSION != '6.1.9.8') {
         alertMsg.confirm("尚未安装打印控件或者不是最新版本，点击确定下载？", {
@@ -25,6 +28,7 @@ function checkPrint() {
         return true;
     }
 }
+
 function printZzszp(fpmx) {
     /**
      * {
@@ -409,18 +413,18 @@ function printZzszp(fpmx) {
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
     }
     printSkmOneByOne(fpmx.skm, 120, 551);
-//	LODOP.ADD_PRINT_TEXT(120,544,300,15,fpmx.skm.substring(0,28));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
-//	LODOP.ADD_PRINT_TEXT(137,544,300,15,fpmx.skm.substring(28,56));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
-//	LODOP.ADD_PRINT_TEXT(154,544,300,15,fpmx.skm.substring(56,84));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
-//	LODOP.ADD_PRINT_TEXT(171,544,300,15,fpmx.skm.substring(84,112));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(120,544,300,15,fpmx.skm.substring(0,28));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(137,544,300,15,fpmx.skm.substring(28,56));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(154,544,300,15,fpmx.skm.substring(56,84));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(171,544,300,15,fpmx.skm.substring(84,112));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
     $.each(fpmx.mxzb, function (i, n) {
         var cezsSl = (n.sl + "") == "" ? "" : (((n.sl + "").length > 4 && (n.sl + "").substring(4, 5) * 1 > 0 ? (n.sl * 100).toFixed(1) : (n.sl * 100).toFixed()) + "%");
         if (fpmx.zsfs == "1" || fpmx.zsfs == "2") {
@@ -540,6 +544,7 @@ function printZzszp(fpmx) {
         LODOP.ADD_PRINT_TEXT(477, 526, 121, 15, kpr);
     }
 }
+
 function printZzspp(fpmx) {
     /**
      * {
@@ -944,18 +949,18 @@ function printZzspp(fpmx) {
         LODOP.SET_PRINT_STYLEA(0, "FontSize", 6);
     }
     printSkmOneByOne(fpmx.skm, 120, 551);
-//	LODOP.ADD_PRINT_TEXT(120,544,300,15,fpmx.skm.substring(0,28));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
-//	LODOP.ADD_PRINT_TEXT(137,544,300,15,fpmx.skm.substring(28,56));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
-//	LODOP.ADD_PRINT_TEXT(154,544,300,15,fpmx.skm.substring(56,84));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
-//	LODOP.ADD_PRINT_TEXT(171,544,300,15,fpmx.skm.substring(84,112));
-//	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
-//	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(120,544,300,15,fpmx.skm.substring(0,28));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(137,544,300,15,fpmx.skm.substring(28,56));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(154,544,300,15,fpmx.skm.substring(56,84));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
+    //	LODOP.ADD_PRINT_TEXT(171,544,300,15,fpmx.skm.substring(84,112));
+    //	LODOP.SET_PRINT_STYLEA(0,"FontName","Courier New");
+    //	LODOP.SET_PRINT_STYLEA(0,"FontSize",12);
     var slFlag = true;
     $.each(fpmx.mxzb, function (i, n) {
         if ((fpmx.qdbz == "1" && (n.fphxz == 3 || n.fphxz == 4)) || (fpmx.qdbz == "0" && (n.fphxz <= 2))) {
@@ -1124,6 +1129,7 @@ function printZzspp(fpmx) {
         LODOP.ADD_PRINT_TEXT(477, 536, 91, 15, kpr);
     }
 }
+
 function printZzszpQD(fpmx) {
     LODOP.SET_PRINT_STYLE("FontColor", "#0000FF");
     LODOP.ADD_PRINT_TEXT(41, 216, 330, 35, "销售货物或者提供应税劳务、服务清单");
@@ -1411,6 +1417,7 @@ function printZzszpQD(fpmx) {
         }
     }
 }
+
 function printZzsppQD(fpmx) {
     LODOP.SET_PRINT_STYLE("FontColor", "#0000FF");
     LODOP.ADD_PRINT_TEXT(41, 216, 330, 35, "销售货物或者提供应税劳务、服务清单");
@@ -1751,6 +1758,7 @@ function printZzsppQD(fpmx) {
         }
     }
 }
+
 function addPrintLineZzszp(i, mc, gg, dw, spsl, dj, je, sl, se) {
     if (mc) {
         var mcLen = countStrLength(mc);
@@ -1835,6 +1843,7 @@ function addPrintLineZzszp(i, mc, gg, dw, spsl, dj, je, sl, se) {
         LODOP.SET_PRINT_STYLEA(0, "Alignment", 3);
     }
 }
+
 function addPrintLineZzspp(i, mc, gg, dw, spsl, dj, je, sl, se) {
     if (mc) {
         var mcLen = countStrLength(mc);
@@ -1941,18 +1950,21 @@ function addPrintLineZzspp(i, mc, gg, dw, spsl, dj, je, sl, se) {
     }
     LODOP.SET_PRINT_STYLEA(0, "Alignment", 3);
 }
+
 function filterMxzbPrint(fpmx) {
     var qdbz = fpmx.qdbz == "1";
     return $.map(fpmx.mxzb, function (n) {
         return (!qdbz || (qdbz && (n.fphxz == "3" || n.fphxz == "4"))) && n.fphxz != "99" ? n : null;
     });
 }
+
 function filterMxzbQDPrint(fpmx) {
     var qdbz = fpmx.qdbz == "1";
     return $.map(fpmx.mxzb, function (n) {
         return (qdbz && (n.fphxz == "1" || n.fphxz == "2" || n.fphxz == "0")) && n.fphxz != "99" ? n : null;
     });
 }
+
 function printRzxh(json) {
     LODOP.PRINT_INITA("12.7mm", "12.7mm", "209mm", "147mm", "日终销号列表");
     LODOP.SET_PRINT_PAGESIZE(1, 2090, 1470, "CreateCustomPage");
@@ -2003,6 +2015,7 @@ function printRzxh(json) {
     LODOP.SET_PRINT_STYLEA(0, "FontSize", 13);
     LODOP.PREVIEW();
 }
+
 /**
  * 打印税控码
  * @param skm 税控码
@@ -2024,8 +2037,8 @@ function printSkmOneByOne(skm, top, left) {
             LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
         }
     }
-
 }
+
 function printJsfp(fpmx, yl) {
     var jpbs = $.cookie("jsfpbs") || "06";
     fpmx.bs = (jpbs == "04") ? "07" : ((jpbs == "05") ? "06" : jpbs);
@@ -2701,6 +2714,7 @@ function printJsfp(fpmx, yl) {
         LODOP.SET_PRINT_STYLEA(0, "Stretch", 2);
     }
 }
+
 function printJdcfp(fpmx, yl) {
     LODOP.PRINT_INITA((yl ? 0 : $.cookie("zbj_jdcfp") || 0) + "mm", (yl ? 0 : $.cookie("ybj_jdcfp") || 0) + "mm", "241mm", "177mm", "机动车销售统一发票");
     LODOP.SET_PRINT_PAGESIZE(1, 2410, 1770, "CreateCustomPage");
@@ -3150,6 +3164,7 @@ function printJdcfp(fpmx, yl) {
     LODOP.ADD_PRINT_IMAGE(15, 90, 66, 66, "data:image/png;base64," + fpmx.ewm);
     LODOP.SET_PRINT_STYLEA(0, "Stretch", 1);
 }
+
 function printEscfp(fpmx, yl) {
     LODOP.PRINT_INITA((yl ? 0 : $.cookie("zbj_escfp") || 0) + "mm", (yl ? 0 : $.cookie("ybj_escfp") || 0) + "mm", "216.51mm", "178.01mm", "二手车销售统一发票");
     LODOP.SET_PRINT_PAGESIZE(1, "216.51mm", "178.01mm", "CreateCustomPage");
@@ -3668,6 +3683,7 @@ function PrintLine06jsfp8hz(i, spmc, dj, sl, hsje) {
     LODOP.ADD_PRINT_TEXT(302 + i * 11, 186, 75, 15, (hsje * 1).toFixed(2));
     LODOP.SET_PRINT_STYLEA(0, "Alignment", 3);
 }
+
 function PrintLine06jsfp7hz(i, spmc, dj, sl, hsje) {
     LODOP.ADD_PRINT_TEXT(302 + i * 9, 16, 80, 100, spmc);
     LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
@@ -3684,6 +3700,7 @@ function PrintLine06jsfp7hz(i, spmc, dj, sl, hsje) {
     LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
     LODOP.SET_PRINT_STYLEA(0, "Alignment", 3);
 }
+
 function PrintLine07jsfp8hz(i, spmc, dj, sl, hsje) {
     LODOP.ADD_PRINT_TEXT(361 + i * 11, 18, 59, 130, spmc);
     LODOP.SET_PRINT_STYLEA(0, "FontSize", 8);
@@ -3699,6 +3716,7 @@ function PrintLine07jsfp8hz(i, spmc, dj, sl, hsje) {
     LODOP.SET_PRINT_STYLEA(0, "FontSize", 8);
     LODOP.SET_PRINT_STYLEA(0, "Alignment", 3);
 }
+
 function PrintLine07jsfp7hz(i, spmc, dj, sl, hsje) {
     LODOP.ADD_PRINT_TEXT(361 + i * 9, 18, 59, 100, spmc);
     LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
@@ -3714,6 +3732,7 @@ function PrintLine07jsfp7hz(i, spmc, dj, sl, hsje) {
     LODOP.SET_PRINT_STYLEA(0, "FontSize", 7);
     LODOP.SET_PRINT_STYLEA(0, "Alignment", 3);
 }
+
 function addPrintLinejsfp(i, bs, spmc) {
     if (bs == "07") {
         var spmclength = countStrLength(spmc);
@@ -3764,6 +3783,7 @@ function addPrintLinejsfp(i, bs, spmc) {
         LODOP.SET_PRINT_STYLEA(0, "TextNeatRow", true);
     }
 }
+
 function addPrintLineJsfpBZ(bs, bz) {
     if (bs == "07") {
         var bzlength = countStrLength(bz);
@@ -3793,6 +3813,7 @@ function addPrintLineJsfpBZ(bs, bz) {
         }
     }
 }
+
 /**
  * 打印税控码
  * @param skm 税控码
@@ -3814,8 +3835,8 @@ function printJdcfpSkmOneByOne(skm, top, left) {
             LODOP.SET_PRINT_STYLEA(0, "FontSize", 12);
         }
     }
-
 }
+
 var printTest = function () {
     var defaultZbj = 0, defaultYbj = 0;
     var fpmx = {
@@ -4229,6 +4250,7 @@ var printTest = function () {
         }
     }
 }();
+
 function printzdewm() {
     if (!checkPrint()) {
         return false;
@@ -4253,6 +4275,7 @@ function printzdewm() {
         LODOP.PREVIEW();
     });
 }
+
 function ocxPrint(fpmx) {
     var fyxm = "", qdxm = "", fyxmC = 0, qdxmC = 0;
     if (!fpmx.dyfs) {
@@ -4306,6 +4329,7 @@ function ocxPrint(fpmx) {
     }
     enableButtons(_$("#qddyx"))
 }
+
 function encodeForXml(fpmx) {
     for (var v in fpmx) {
         var n = fpmx[v];
