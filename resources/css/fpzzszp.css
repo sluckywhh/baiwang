@@ -1,0 +1,33 @@
+.fp-main {
+	color: green;
+	word-break: break-all;
+}
+.fpdm,.fphm{
+	color: red;
+	font-size: 12pt;
+}
+.fp-title {
+	text-align: center;
+	font-size: 14pt;
+}
+.fp-content-center{
+}
+.button,.buttonDisabled{
+	margin-left: 4px;
+}
+.fp-content-center textarea{
+	border: 1px solid #9de8e1;
+}
+.fp-content-center input,.fp-content-center select{
+	border: 1px solid #9de8e1;
+}
+.fp-content-center input:focus,.fp-content-center select:focus,.fp-content-center textarea:focus{
+	border: 1px solid #00FF00;
+}
+.fp-content-center table{
+	border-collapse: collapse;
+}
+.fp-content-center td{
+	border: none;
+	text-align: center;
+}

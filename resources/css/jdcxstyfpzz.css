@@ -1,0 +1,18 @@
+.jdcfp-content-center{
+ height: 545px;
+ width: 773px;
+ background-image: url("../images/jdcpy.jpg");
+ background-repeat: no-repeat;
+ background-position: 0 -5px;
+ text-align: left;
+}
+.jdcfp-content-center.fp-content-center td{
+ text-align: left;
+}
+.jdcfp-content-center td span{
+ font-size: 14px;
+ color: blue;
+}
+.jdcfp-content-center input:disabled{
+ background-color: #e4ebf6;
+}

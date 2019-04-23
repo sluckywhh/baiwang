@@ -1,0 +1,22 @@
+.escfp-content-center{
+ height: 550px;
+ width: 773px;
+ background-image: url("../images/escpy.jpg");
+ background-repeat: no-repeat;
+ background-position: 0 -5px;
+ text-align: left;
+}
+.escfp-content-center.fp-content-center td{
+ text-align: left;
+}
+.escfp-content-center td span{
+ font-size: 14px;
+ color: blue;
+}
+.escfp-content-center input:disabled{
+ background-color: #e4ebf6;
+}
+
+.esc_zzskpxx table td{
+ padding-top: 10px;
+}

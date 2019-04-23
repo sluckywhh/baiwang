@@ -1,0 +1,31 @@
+#hzdd_spbm1 label{
+	cursor: pointer;
+}
+#hzdd_spbm1 label:HOVER {
+	color: red;
+}
+#hzsqd_sc_spbm_form .fp-content-center{
+	background: white;
+	width: 714px;
+	height: 100%;
+}
+#hzsqd_sc_spbm_form .fp-content-center table{
+	border-collapse: collapse;
+	width: 714px;
+}
+#hzsqd_sc_spbm_form .fp-content-center td{
+	border: 1px solid red;
+	border-top: none;
+	text-align: center;
+}
+#hzsqd_sc_spbm_form .fyxms td{
+	border: none;
+	border-right: 1px solid red;
+}
+#hzsqd_sc_spbm_form .fyxms td:first-child{
+	border-left: 1px solid red;
+}
+#hzsqd_sc_spbm_form input[type=radio]{
+	margin-top: -1px;
+	margin-bottom: -1px;
+}
