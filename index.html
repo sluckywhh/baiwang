@@ -1,0 +1,1968 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=9;IE=8">
+    <title>税控服务器管理系统</title>
+    <link href="/SKServer/resources/css/jdcxstyfpzz.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/css/escxstyfpzz.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/dwz/themes/default/style.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/dwz/themes/css/core.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/dwz/themes/css/print.css" rel="stylesheet" type="text/css" media="print">
+    <link href="/SKServer/resources/dwz/uploadify/css/uploadify.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/css/common.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/css/fpzzszp.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/css/hzsqd.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/css/jdcxstyfpzz.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/css/jquery.autocomplete.css" rel="stylesheet" type="text/css" media="screen">
+    <link href="/SKServer/resources/zTree/css/zTreeStyle.css" rel="stylesheet" type="text/css" media="screen">
+    <!--[if IE]>
+	    <link href="/SKServer/resources/dwz/themes/css/ieHack.css" rel="stylesheet" type="text/css" media="screen"/>
+	<![endif]-->
+    <script src="/SKServer/resources/dwz/js/jquery-currency.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/dwz/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/dwz/js/jquery.validate.min.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/dwz/js/jquery.autocomplete.js" type="text/javascript"></script>
+    <!-- 杂项
+    <script src="/SKServer/resources/dwz/js/jquery.bgiframe.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/dwz/xheditor/xheditor-1.2.1.min.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/dwz/xheditor/xheditor_lang/zh-cn.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/dwz/uploadify/scripts/jquery.uploadify.js" type="text/javascript"></script>
+    -->
+    <!-- svg图表  supports Firefox 3.0+, Safari 3.0+, Chrome 5.0+, Opera 9.5+ and Internet Explorer 6.0+
+    <script type="text/javascript" src="/SKServer/resources/dwz/chart/raphael.js"></script>
+    <script type="text/javascript" src="/SKServer/resources/dwz/chart/g.raphael.js"></script>
+    <script type="text/javascript" src="/SKServer/resources/dwz/chart/g.bar.js"></script>
+    <script type="text/javascript" src="/SKServer/resources/dwz/chart/g.line.js"></script>
+    <script type="text/javascript" src="/SKServer/resources/dwz/chart/g.pie.js"></script>
+    <script type="text/javascript" src="/SKServer/resources/dwz/chart/g.dot.js"></script>
+    -->
+    <!-- 压缩前js
+        <script src="/SKServer/resources/dwz/js/dwz.core.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.util.date.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.validate.method.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.barDrag.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.drag.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.tree.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.accordion.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.ui.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.theme.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.switchEnv.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.alertMsg.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.contextmenu.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.navTab.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.tab.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.resize.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.dialog.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.dialogDrag.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.sortDrag.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.cssTable.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.stable.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.taskBar.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.ajax.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.pagination.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.database.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.datepicker.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.effects.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.panel.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.checkbox.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.history.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.combox.js" type="text/javascript"></script>
+        <script src="/SKServer/resources/dwz/js/dwz.print.js" type="text/javascript"></script>
+        -->
+    <!--压缩后js-->
+    <script src="/SKServer/resources/dwz/bin/dwz.min.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/dwz/js/dwz.regional.zh.js" type="text/javascript"></script>
+
+    <!-- tree -->
+    <script src="/SKServer/resources/zTree/js/jquery.ztree.core.min.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/zTree/js/jquery.ztree.exedit.min.js" type="text/javascript"></script>
+
+    <!-- 项目js-->
+    <script src="/SKServer/resources/js/sm3/sm3all.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/sm4/sm4all.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/ycbgxp/ycbgxp.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/cpyzxfpkc.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/ycbgxp/bspbg.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/escfp/zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/escfp/fpcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/escfp/fpcxtb.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/jdcfp/zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/common.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/print.js" type="text/javascript"></script>
+    <link href="/SKServer/resources/js/My97DatePicker/skin/WdatePicker.css" rel="stylesheet" type="text/css">
+</head>
+
+<body scroll="no">
+    <object id="LODOP_OB" classid="clsid:2105C259-1E0C-4534-8141-A753534CB4CA" width="0" height="0">
+        <embed id="LODOP_EM" type="application/x-print-lodop" width="0" height="0">
+    </object>
+    <script src="/SKServer/resources/js/printDzfp.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fpqm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/jQuery.Hz2Py-min.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/jdcfp/fpcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/jdcfp/zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/jdcfp/fpcxtb.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/dzfp/fpcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzsjp/fpcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzsjp/fsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzsjp/zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/dzfp/zsfpkj.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/dzfp/zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/dzfp/fsfpkj.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/dzfp/fpcxtb.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/dzfp/fsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzspp/fpcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzspp/zsfpkj.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzspp/zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzspp/fsfpkj.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzspp/fsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/fphf.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/fpcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/fpkj.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/fpxf.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/fpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/zzp_fpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/zzp_hzsqd_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/zpp_zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/zpp_fsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/jsfp_zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/jsfp_fsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/dzfp_zsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cpy/dzfp_fsfpkj_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/kbfpzf.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/fpcxsk.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/hzsqd.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/hzsqd_spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/zzp/xfHzsqd.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspcbfx/cb.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspcbfx/fx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/cbsgl/cbsgl.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspcbfx/czygl.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/My97DatePicker/WdatePicker.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fptj/fpcxdy.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fptj/fpcxdyKpy.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fptj/sbhzcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspfpff/bspfpff.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspfpff/bspfpffD.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspfpff/bspfpffCpy.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspfpff/bspfphsD.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspfpff/bspfphsCpy.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/djgl/plkp.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspcbfx/cbD.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/djgl/djgl.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspfpff/bspszjz.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fpgl/fpgl.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fwqgl/fwqgl.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/jkyj/jkyj.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/spbm/spbm.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/spbmcsh/spbmcsh.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/spbm/spxx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/wssl/wssl.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/pldyfp/pldyfp.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/gly/glyqx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/bspfpff/bspxxcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/dcmb/dcmb.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fptj/sbcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fptj/tjcx.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/jxfp/fpqr.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fptj/fphz.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/sjrz/sjrz.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/kpzdgl/kpzdgl.js" type="text/javascript"></script>
+    <script src="/SKServer/resources/js/fwpj/fwpj.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+        var ctxPath = "/SKServer";
+        var khdqmjgsj = 20000;
+        var ewmsize = "1.8";
+        var no_check_bank_account = "0";
+        if (ewmsize == "") {
+            ewmsize = 1.8;
+        }
+        var czylx = 0;
+        var usbzskl = "";
+        var nsrsbh = "44001020458010000";
+        var sk_version = "";
+        var pageToken = "ab3a019b84e2a1a7d41444e0da93d989";
+        var by1 = "0,0,111,111,0,0,0,0,0,0,07,19,19,11,22";
+        var min_ypsl = ""; //最小余票数量（预警值）
+        if (min_ypsl == "") {
+            min_ypsl = 0; //默认值
+        } else {
+            min_ypsl = parseInt(min_ypsl);
+        }
+        $(function () {
+            DWZ.init("/SKServer/resources/dwz/dwz.frag.xml", {
+                //	loginUrl:"login_dialog.html", loginTitle:"登录",	// 弹出登录对话框
+                loginUrl: ctxPath + "/index.jsp?relogin=true&_=" + new Date().getTime(), // 跳到登录页面
+                statusCode: {
+                    ok: 200,
+                    error: 300,
+                    timeout: 301
+                }, //【可选】
+                pageInfo: {
+                    pageNum: "pageNum",
+                    numPerPage: "pageSize",
+                    orderField: "orderField",
+                    orderDirection: "orderDirection"
+                }, //【可选】
+                debug: false, // 调试模式 【true|false】
+                callback: function () {
+                    initEnv();
+                    $("#themeList").theme({
+                        themeBase: "/SKServer/resources/dwz/themes"
+                    }); // themeBase 相对于index页面的主题base路径
+                    setTimeout(initHomePage, 200);
+                    qcookie();
+                }
+
+            });
+        });
+        //取数据库中的cookie值（by1）
+        function qcookie() {
+            if (by1 == "") {
+                return;
+            }
+            var c = by1.split(",");
+            $.cookie("zbj_zzsz", c[0] == "null" ? 0 : (c[0] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("ybj_zzsz", c[1] == "null" ? 0 : (c[1] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("zbj_zzsp", c[2] == "null" ? 0 : (c[2] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("ybj_zzsp", c[3] == "null" ? 0 : (c[3] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("zbj_qd_zzsz", c[4] == "null" ? 0 : (c[4] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("ybj_qd_zzsz", c[5] == "null" ? 0 : (c[5] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("zbj_qd_zzsp", c[6] == "null" ? 0 : (c[6] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("ybj_qd_zzsp", c[7] == "null" ? 0 : (c[7] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("zbj_jsfp", c[8] == "null" ? 0 : (c[8] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("ybj_jsfp", c[9] == "null" ? 0 : (c[9] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("jsfpbs", c[10] == "null" ? "06" : (c[10] || "06"), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("zbj_jdcfp", c[11] == "null" ? 0 : (c[11] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("ybj_jdcfp", c[12] == "null" ? 0 : (c[12] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("zbj_escfp", c[13] == "null" ? 0 : (c[13] || 0), {
+                path: "/",
+                expires: 100000
+            });
+            $.cookie("ybj_escfp", c[14] == "null" ? 0 : (c[14] || 0), {
+                path: "/",
+                expires: 100000
+            });
+        }
+
+        function initHomePage() {
+            window.ajaxLoad = function (url, data, callback) {
+                if ($.isFunction(data)) {
+                    $("#ajaxHidden").loadUrl(url, {}, data);
+                } else {
+                    $("#ajaxHidden").loadUrl(url, data, callback);
+                }
+            }
+            window.ie6 = $.browser.version == "6.0";
+            Number.prototype.toFixed = function (s) {
+                s = s || 0;
+                var that = Math.abs(this);
+                var pow = Math.pow(10, s);
+                var plus = (that * pow);
+                //对于四舍五入两位时对于精度丢失的进行处理，例如286.49999999999按照286.5处理
+                if (s == 2) {
+                    var strPlus = new String(plus);
+                    var pos = strPlus.indexOf(".");
+                    if (pos > 0 && strPlus.substring(pos + 1, pos + 2) == 4 && /^9{6,}$/.test(strPlus.substring(
+                            pos + 2, pos + 8))) {
+                        plus = parseInt(plus) + 1;
+                    }
+                }
+                var changenum = (parseInt(plus + 0.5) / pow).toString();
+                var index = changenum.indexOf(".");
+                if (index < 0 && s > 0) {
+                    changenum = changenum + ".";
+                    for (var i = 0; i < s; i++) {
+                        changenum = changenum + "0";
+                    }
+                } else {
+                    index = changenum.length - index;
+                    for (var i = 0; i < (s - index) + 1; i++) {
+                        changenum = changenum + "0";
+                    }
+                }
+                return (this < 0 ? "-" : "") + changenum;
+            }
+            checkSyfp();
+            kpdxxjy();
+        }
+
+        function checkSyfp() {
+            if (czylx != 1) {
+                return;
+            }
+            ajaxLoad(ctxPath + "/fwqxx/fplgxx.do?format=json", function (json) {
+                var min = min_ypsl;
+                var map = new HashMap();
+                var alertB = false;
+                var alertStr = "当前开票点余票过少，已不足" + min + "张，请确认!<br/>"
+                $.each(json.data, function (i, n) {
+                    if (map.containsKey("fp_" + n.fplxdm)) {
+                        return true;
+                    }
+                    map.put("fp_" + n.fplxdm, true);
+                    if (n.zsyfs < min) {
+                        alertB = true;
+                        alertStr += (n.fplxdm == "004" ? "增值税专用发票" : n.fplxdm == "007" ? "增值税普通发票" : n
+                            .fplxdm == "026" ? "增值税普通发票(电子)" : n.fplxdm == "005" ? "机动车销售统一发票" :
+                            "增值税普通发票（卷式）") + "共剩余" + n.zsyfs + "张。<br/>";
+                    }
+                })
+                if (alertB) {
+                    alertMsg.warn(alertStr);
+                }
+            })
+        }
+        /*开票点信息存在值为时默认时更新开票点信息*/
+        function kpdxxjy() {
+            ajaxLoad(ctxPath + "/sys/kpdxxjy.do", function (data) {
+                if (data == false) {
+                    $.pdialog.open(ctxPath + "/sys/kpdxDialog.do", "kpdxxUpdateOnLogin", "编辑开票点信息", {
+                        width: 470,
+                        height: 200
+                    })
+
+                }
+            });
+        }
+    </script>
+
+
+    <div id="layout">
+        <div id="header">
+            <div class="headerNav">
+                <ul class="nav">
+
+
+                    <li style="color:#b9ccda">登录人代码：cxyh</li>
+
+
+                    <li style="color:#b9ccda" class="yhm">用户名称：cxyh</li>
+                    <li><a target="dialog" rel="xgmc_dlg" height="200" width="470"
+                            href="/SKServer/sys/toxgmc.do">修改用户名</a></li>
+                    <li><a target="dialog" rel="xgmm_dlg" height="200" width="470"
+                            href="/SKServer/sys/toxgmm.do">修改密码</a></li>
+                    <li><a href="/SKServer/sys/logout.do">退出</a></li>
+                </ul>
+                <ul class="themeList" id="themeList">
+                    <li theme="default" class="default">
+                        <div class="selected">蓝色</div>
+                    </li>
+                    <li theme="green" class="green">
+                        <div>绿色</div>
+                    </li>
+                    <li theme="purple" class="purple">
+                        <div>紫色</div>
+                    </li>
+                    <li theme="silver" class="silver">
+                        <div>银色</div>
+                    </li>
+                    <li theme="azure" class="azure">
+                        <div>天蓝</div>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- navMenu -->
+        </div>
+        <div id="leftside">
+            <div id="sidebar_s">
+                <div class="collapse" style="height: 155px;">
+                    <div class="toggleCollapse">
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+            <div id="sidebar" style="height: 155px;">
+                <div class="toggleCollapse">
+                    <h2>主菜单</h2>
+                    <div>收缩</div>
+                </div>
+                <div class="accordion dwz-accordion" fillspace="sidebar">
+                    <div class="accordionHeader">
+                        <h2 class="collapsable"><span>Folder</span>系统功能</h2>
+                    </div>
+                    <div class="accordionContent" style="height: 101px;">
+                        <ul class="tree treeFolder expand">
+
+                            <li>
+                                <div>
+                                    <div class="first_collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>报税处理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div class="">
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServersssss" target="navTab"
+                                                rel="menu_109745075">ssssss</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="">
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bsinfo/init.do?target=navTab&amp;rel=bsinfo_nav"
+                                                target="navTab" rel="bsinfo_nav">报税资料传出</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div class="">
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServerwww" target="navTab"
+                                                rel="menu_118167">wwww</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div class="">
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>合并开票管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div class="">
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/abc/fpykj_xtw.do?target=navTab&amp;rel=abc_fpykj_xtw_nav"
+                                                target="navTab" rel="abc_fpykj_xtw_nav">系统外发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div class="">
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/abc/fpykj_xtn.do?target=navTab&amp;rel=abc_fpykj_xtn_nav"
+                                                target="navTab" rel="abc_fpykj_xtn_nav">系统内发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/abc/fpykj_gl.do?target=navTab&amp;rel=abc_fpykj_gl_nav"
+                                                target="navTab" rel="abc_fpykj_gl_nav">预开具信息管理</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>开票终端管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/kpzdxx/list.do?target=navTab&amp;rel=kpzdgl_nav"
+                                                target="navTab" rel="kpzdgl_nav">开票终端管理</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>发票管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpff/fwqff.do?target=navTab&amp;rel=fpff_fwqff_nav"
+                                                target="navTab" rel="fpff_fwqff_nav">分给开票终端</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpff/glyff.do?target=navTab&amp;rel=fpff_glyff_nav"
+                                                target="navTab" rel="fpff_glyff_nav">分给管理员</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpff/ffjl.do?target=navTab&amp;rel=fpff_ffjl_nav"
+                                                target="navTab" rel="fpff_ffjl_nav">分发记录</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpgl/initFphs.do?target=navTab&amp;rel=fplg_fphs_nav"
+                                                target="navTab" rel="fplg_fphs_nav">开票端回收</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpgl/initFphsgly.do?target=navTab&amp;rel=fplg_fphsgly_nav"
+                                                target="navTab" rel="fplg_fphsgly_nav">管理员回收</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/wsslsjr/init.do?target=navTab&amp;rel=wsslSjrxx_nav"
+                                                target="navTab" rel="wsslSjrxx_nav">发票配送信息维护</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpgl/initFpypcx.do?target=navTab&amp;rel=fpypcx_nav"
+                                                target="navTab" rel="fpypcx_nav">发票余票查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpgl/initFphsxx.do?target=navTab&amp;rel=fplg_fphsxx_nav"
+                                                target="navTab" rel="fplg_fphsxx_nav">回收记录</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/wssl/init.do?target=navTab&amp;rel=wssl_nav"
+                                                target="navTab" rel="wssl_nav">网上申领</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/wsgp/init.do?target=navTab&amp;rel=wsgp_nav"
+                                                target="navTab" rel="wsgp_nav">网上领票</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpphcx/queryFpphcx.do?target=navTab&amp;rel=fpph_nav"
+                                                target="navTab" rel="fpph_nav">发票票号查询</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>增值税专用发票</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp_spbm/init.do?target=navTab&amp;rel=zzp_zsfpkj_nav"
+                                                target="navTab" rel="zzp_zsfpkj_nav">增专发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp_spbm/init_jh.do?target=navTab&amp;rel=zzp_zsfpkj_nav"
+                                                target="navTab" rel="zzp_zsfpkj_nav">增专发票开具(建行)</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp_spbm/init.do?target=navTab&amp;rel=zzp_zsfpkj_nav&amp;zkfs=1"
+                                                target="navTab" rel="zzp_zsfpkj_nav">增专负数发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/fpcx.do?target=navTab&amp;rel=zzp_fpcx_nav"
+                                                target="navTab" rel="zzp_fpcx_nav">增专发票查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/tofpxf.do?fplxdm=004&amp;target=navTab&amp;rel=zzp_fpxf_nav"
+                                                target="navTab" rel="zzp_fpxf_nav">增专发票修复</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/kbfpzf.do?fplxdm=004&amp;target=navTab&amp;rel=zzp_kbzf_nav"
+                                                target="navTab" rel="zzp_kbzf_nav">增专空白发票作废</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/xfHzsqd/init.do?target=navTab&amp;rel=zzp_xfHzsqd_nav"
+                                                target="navTab" rel="zzp_xfHzsqd_nav">红字信息表管理（接口）</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpcxsk/init.do?fplxdm=004&amp;target=navTab&amp;rel=fpcxskzp_nav"
+                                                target="navTab" rel="fpcxskzp_nav">发票查询同步</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/hzsqdspbm/init.do?target=navTab&amp;rel=zzp_hzsqdspbm_nav"
+                                                target="navTab" rel="zzp_hzsqdspbm_nav">红字信息表管理</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>成品油发票管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bspFpffCpy/init.do?target=navTab&amp;rel=bspfpffCpy_nav"
+                                                target="navTab" rel="bspfpffCpy_nav">报税盘库存分发</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bspfphsCpy/fphscx.do?target=navTab&amp;rel=bspfphsCpy_nav"
+                                                target="navTab" rel="bspfphsCpy_nav">报税盘库存回收</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_zxfpkc/cpykccx.do?target=navTab&amp;rel=cpykccx_nav"
+                                                target="navTab" rel="cpykccx_nav">库存明细查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_zxfpkc/init.do?target=navTab&amp;rel=cpyzxfpkc_nav"
+                                                target="navTab" rel="cpyzxfpkc_nav">在线库存管理</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_zzp/init.do?target=navTab&amp;rel=cpy_zzp_fpkj_nav"
+                                                target="navTab" rel="cpy_zzp_fpkj_nav">增专发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_hzsqdspbm/init.do?target=navTab&amp;rel=cpy_zzp_hzsqdspbm_nav"
+                                                target="navTab" rel="cpy_zzp_hzsqdspbm_nav">红字信息表管理</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_zpp_zsfpkj/init.do?target=navTab&amp;rel=cpy_zzspp_zsfpkj_nav"
+                                                target="navTab" rel="cpy_zzspp_zsfpkj_nav">增普正数开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_zpp_fsfpkj/init.do?target=navTab&amp;rel=cpy_zpp_fsfpkj_nav"
+                                                target="navTab" rel="cpy_zpp_fsfpkj_nav">增普负数开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_jsfp_zsfpkj/init.do?target=navTab&amp;rel=cpy_jsfp_zsfpkj_nav"
+                                                target="navTab" rel="cpy_jsfp_zsfpkj_nav">卷式发票正数开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_jsfp_fsfpkj/init.do?target=navTab&amp;rel=cpy_jsfp_fsfpkj_nav"
+                                                target="navTab" rel="cpy_jsfp_fsfpkj_nav">卷式发票负数开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_dzfp_zsfpkj/init.do?target=navTab&amp;rel=cpy_dzfp_zsfpkj_nav"
+                                                target="navTab" rel="cpy_dzfp_zsfpkj_nav">电子发票正数开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cpy_dzfp_fsfpkj/init.do?target=navTab&amp;rel=cpy_dzfp_fsfpkj_nav"
+                                                target="navTab" rel="cpy_dzfp_fsfpkj_nav">电子发票负数开具</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>增值税电子发票</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp/init.do?target=navTab&amp;rel=dzfp_zsfpkj_nav"
+                                                target="navTab" rel="dzfp_zsfpkj_nav">正数发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp_spbm/init.do?target=navTab&amp;rel=dzfp_zsfpkj_nav"
+                                                target="navTab" rel="dzfp_zsfpkj_nav">正数发票开具(spbm)</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp_spbm/init.do?target=navTab&amp;rel=dzfp_zsfpkj_nav&amp;fpsg=1"
+                                                target="navTab" rel="dzfp_zsfpkj_nav">正数发票开具（收购发票）</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp_fs/init.do?target=navTab&amp;rel=dzfp_fsfpkj_nav"
+                                                target="navTab" rel="dzfp_fsfpkj_nav">负数发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp_fs_spbm/init.do?target=navTab&amp;rel=dzfp_fsfpkj_nav"
+                                                target="navTab" rel="dzfp_fsfpkj_nav">负数发票开具(spbm)</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp_fs_spbm/init.do?target=navTab&amp;rel=dzfp_fsfpkj_nav&amp;fpsg=1"
+                                                target="navTab" rel="dzfp_fsfpkj_nav">负数发票开具（收购发票）</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp/fpcx.do?target=navTab&amp;rel=dzfp_fpcx_nav"
+                                                target="navTab" rel="dzfp_fpcx_nav">电子发票查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpcxtb/init.do?fplxdm=026&amp;target=navTab&amp;rel=Fpcxskdzp_nav"
+                                                target="navTab" rel="Fpcxskdzp_nav">发票查询同步</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>增值税普通发票</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzspp_spbm/init.do?target=navTab&amp;rel=zzspp_zsfpkj_nav"
+                                                target="navTab" rel="zzspp_zsfpkj_nav">增普正数发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzspp_spbm/init_jh.do?target=navTab&amp;rel=zzspp_zsfpkj_nav"
+                                                target="navTab" rel="zzspp_zsfpkj_nav">增普正数开具(建行)</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzspp_spbm/init.do?target=navTab&amp;rel=zzspp_zsfpkj_nav&amp;fpsg=1"
+                                                target="navTab" rel="zzspp_zsfpkj_nav">增普正数开具（收购发票）</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzspp_fs_spbm/init.do?target=navTab&amp;rel=zzspp_fsfpkj_nav"
+                                                target="navTab" rel="zzspp_fsfpkj_nav">增普负数发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzspp_fs_spbm/init.do?target=navTab&amp;rel=zzspp_fsfpkj_nav&amp;fpsg=1"
+                                                target="navTab" rel="zzspp_fsfpkj_nav">增普负数开具（收购发票）</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/kbfpzf.do?fplxdm=007&amp;target=navTab&amp;rel=zzspp_kbzf_nav"
+                                                target="navTab" rel="zzspp_kbzf_nav">增普空白发票作废</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzspp/fpcx.do?target=navTab&amp;rel=zzspp_fpcx_nav"
+                                                target="navTab" rel="zzspp_fpcx_nav">增普发票查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/tofpxf.do?fplxdm=007&amp;target=navTab&amp;rel=zzspp_fpxf_nav"
+                                                target="navTab" rel="zzspp_fpxf_nav">增普发票修复</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpcxsk/init.do?fplxdm=007&amp;target=navTab&amp;rel=fpcxskpp_nav"
+                                                target="navTab" rel="fpcxskpp_nav">发票查询同步</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>二手车销售统一发票</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/escfp/init.do?target=navTab&amp;rel=escfp_zsfpkj_nav"
+                                                target="navTab" rel="escfp_zsfpkj_nav">发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/escfp_fpcx/fpcx.do?target=navTab&amp;rel=escfp_fpcx_nav"
+                                                target="navTab" rel="escfp_fpcx_nav">二手车发票查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpcxtbsk/init.do?fplxdm=006&amp;target=navTab&amp;rel=Fpcxskjdcfp_nav"
+                                                target="navTab" rel="Fpcxskjdcfp_nav">发票查询同步</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/kbfpzf.do?fplxdm=006&amp;target=navTab&amp;rel=escfp_kbzf_nav"
+                                                target="navTab" rel="escfp_kbzf_nav">空白作废</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>机动车销售统一发票</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/jdcfp/init.do?target=navTab&amp;rel=jdcfp_zsfpkj_nav"
+                                                target="navTab" rel="jdcfp_zsfpkj_nav">发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/jdcfp_fpcx/fpcx.do?target=navTab&amp;rel=jdcfp_fpcx_nav"
+                                                target="navTab" rel="jdcfp_fpcx_nav">发票查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpcxtbsk/init.do?fplxdm=005&amp;target=navTab&amp;rel=Fpcxskjdcfp_nav"
+                                                target="navTab" rel="Fpcxskjdcfp_nav">发票查询同步</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/kbfpzf.do?fplxdm=005&amp;target=navTab&amp;rel=jdcfp_kbzf_nav"
+                                                target="navTab" rel="jdcfp_kbzf_nav">空白作废</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>批量开票管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zdpzTy/initZdpz.do?target=navTab&amp;rel=zdpzTy_nav"
+                                                target="navTab" rel="zdpzTy_nav">字段配置</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zdpz/initZdpz.do?target=navTab&amp;rel=zdpz_nav"
+                                                target="navTab" rel="zdpz_nav">字段配置滴滴版</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/djgl/initDjgl.do?target=navTab&amp;rel=djgl_nav"
+                                                target="navTab" rel="djgl_nav">单据管理</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/djkp/list.do?target=navTab&amp;rel=djkp_nav"
+                                                target="navTab" rel="djkp_nav">发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/djkpEsc/list.do?target=navTab&amp;rel=djkpEsc_nav"
+                                                target="navTab" rel="djkpEsc_nav">发票开具（二手车）</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/djkpJdc/list.do?target=navTab&amp;rel=djkpJdc_nav"
+                                                target="navTab" rel="djkpJdc_nav">发票开具（机动车）</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/pldyfp/pldyfpInit.do?target=navTab&amp;rel=pldyfp_nav"
+                                                target="navTab" rel="pldyfp_nav">发票打印</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpphcx/queryFpphcx.do?target=navTab&amp;rel=fpph_nav"
+                                                target="navTab" rel="fpph_nav">发票票号查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dcmb/mblist.do?target=navTab&amp;rel=dcmb_nav"
+                                                target="navTab" rel="dcmb_nav">导出模板</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>增值税普通卷式发票</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzsjp/fpcx.do?target=navTab&amp;rel=zzsjp_fpcx_nav"
+                                                target="navTab" rel="zzsjp_fpcx_nav">卷式发票查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/fpcxtb/init.do?fplxdm=025&amp;target=navTab&amp;rel=Fpcxskjsp_nav"
+                                                target="navTab" rel="Fpcxskjsp_nav">发票查询同步</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzsjp_spbm/init.do?target=navTab&amp;rel=zzsjp_zsfpkj_nav"
+                                                target="navTab" rel="zzsjp_zsfpkj_nav">正数发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzsjp_fs_spbm/init.do?target=navTab&amp;rel=zzsjp_fsfpkj_nav"
+                                                target="navTab" rel="zzsjp_fsfpkj_nav">负数发票开具</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/kbfpzf.do?fplxdm=025&amp;target=navTab&amp;rel=zzsjp_kbzf_nav"
+                                                target="navTab" rel="zzsjp_kbzf_nav">卷式发票空白作废</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>抄报管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/Cbsjd/initPageInfo.do?target=navTab&amp;rel=bspcbsjd_nav"
+                                                target="navTab" rel="bspcbsjd_nav">报税盘抄报数据</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/Fxsj/initPageInfo.do?target=navTab&amp;rel=bspgxjksj_nav"
+                                                target="navTab" rel="bspgxjksj_nav">报税盘更新监控</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="javascript:void(0)"
+                                                onclick="window.open('/SKServer/resources/download/kpkj.EXE')">控件下载</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/wscb/cbjbxx.do?target=navTab&amp;rel=cbjbxx_nav"
+                                                target="navTab" rel="cbjbxx_nav">网上抄报</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/cbfxjgcx/cbfxFind.do?target=navTab&amp;rel=cbfxcx_nav"
+                                                target="navTab" rel="cbfxcx_nav">抄报与返写结果查询</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>增值税普通发票（电子票）</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/dzfp/fpcx.do?target=navTab&amp;rel=dzfp_fpcx_nav"
+                                                target="navTab" rel="dzfp_fpcx_nav">增值税电子发票查询</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>报税盘管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bspFpffD/fplxcx.do?target=navTab&amp;rel=bspfprkd_nav"
+                                                target="navTab" rel="bspfprkd_nav">报税盘发票分发</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bspbg/init.do?target=navTab&amp;rel=bspbg_nav"
+                                                target="navTab" rel="bspbg_nav">报税盘远程变更</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bspfphsd/initPageInfo1.do?target=navTab&amp;rel=bspfphsd_nav"
+                                                target="navTab" rel="bspfphsd_nav">报税盘发票回收</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bspjzsz/initPageInfo1.do?target=navTab&amp;rel=bspsjjzcs_nav"
+                                                target="navTab" rel="bspsjjzcs_nav">报税盘校准时钟</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/bspxxcx/init.do?target=navTab&amp;rel=bspxxcx_nav"
+                                                target="navTab" rel="bspxxcx_nav">报税盘信息查询</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>系统管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/fpscqd/tofpscqd.do"
+                                                target="navTab" rel="menu_382709086">上传日志获取</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/tofphf.do?target=navTab&amp;rel=zzp_fphf_nav"
+                                                target="navTab" rel="zzp_fphf_nav">增值税发票段修复</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/sys/zskl.do?target=dialog&amp;rel=zskl_dlg&amp;width=480&amp;height=200"
+                                                target="dialog" rel="zskl_dlg" width="480" height="200">同步证书口令</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/glyqx/initGlyqx.do?target=navTab&amp;rel=gly_glyqx_nav"
+                                                target="navTab" rel="gly_glyqx_nav">管理员权限移交</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/Czyglny/findCzyxx.do?target=navTab&amp;rel=czylbny_nav"
+                                                target="navTab" rel="czylbny_nav">操作员管理</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/zzp/tofpxf.do?target=navTab&amp;rel=zzp_fpxf_nav"
+                                                target="navTab" rel="zzp_fpxf_nav">发票修复</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/sys/nsrxxwh.do?target=navTab&amp;rel=nsrxxwh_nav"
+                                                target="navTab" rel="nsrxxwh_nav">纳税人信息维护</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/sys/fyxmxxwh.do?target=navTab&amp;rel=fyxmxxwh_nav"
+                                                target="navTab" rel="fyxmxxwh_nav">增值税费用项目维护</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/spbm/init.do?target=navTab&amp;rel=spbminit_nav"
+                                                target="navTab" rel="spbminit_nav">税收编码维护</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/sys/tojzsz.do?target=navTab&amp;rel=tojzsz_nav"
+                                                target="navTab" rel="tojzsz_nav">网上校准时钟</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/resources/static/printTest.html"
+                                                target="navTab" rel="menu_1671572830">打印设置</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/ypyj/toSetPage.do?target=dialog&amp;rel=ypyj_dlg&amp;width=480&amp;height=200"
+                                                target="dialog" rel="ypyj_dlg" width="480" height="200">余票预警设置</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/CzyZxzt/czyZxztCx.do"
+                                                target="navTab" rel="menu_526474638">在线用户查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/CzyZxzt/ycsjgj.do"
+                                                target="navTab" rel="menu_456627185">异常事件告警</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/sjrz/sjrzcx.do" target="navTab"
+                                                rel="menu_166081564">审计日志查询</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>服务器信息</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/qycs/init.do?target=navTab&amp;rel=qycs_nav"
+                                                target="navTab" rel="qycs_nav">企业信息管理</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="line"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a
+                                                href="/SKServer/szhy/init.do?target=navTab&amp;rel=szhy_nav"
+                                                target="navTab" rel="szhy_nav">税号变更</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                            <li>
+                                <div>
+                                    <div class="last_collapsable"></div>
+                                    <div class="folder_collapsable"></div><a>申报管理</a>
+                                </div>
+
+                                <ul>
+
+
+                                    <li>
+                                        <div>
+                                            <div class="indent"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/fptj/cxdy.do" target="navTab"
+                                                rel="menu_1851792527">申报查询</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="indent"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/fptjbyczy/cxdybyczy.do"
+                                                target="navTab" rel="menu_1912457205">统计查询(当前登录人)</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="indent"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/fptjbydsh/cxdybydsh.do"
+                                                target="navTab" rel="menu_64732067">多税号统计</a>
+                                        </div>
+                                    </li>
+
+                                    <li>
+                                        <div>
+                                            <div class="indent"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/fptjkpy/cxdy.do" target="navTab"
+                                                rel="menu_719783675">申报导出</a>
+                                        </div>
+                                    </li>
+
+                                    <li class="last">
+                                        <div>
+                                            <div class="indent"></div>
+                                            <div class="node"></div>
+                                            <div class="file"></div><a href="/SKServer/fphz/yhztj.do" target="navTab"
+                                                rel="menu_1809248284">汇总信息</a>
+                                        </div>
+                                    </li>
+
+                                </ul>
+
+                            </li>
+
+                        </ul>
+
+                    </div>
+                    <!--
+					<div class="accordionHeader">
+						<h2><span>Folder</span>辅助功能</h2>
+					</div>
+					<div class="accordionContent">
+
+						<ul class="tree treeFolder">
+							<li><a href="/SKServer/abc/fpykj.do" target="navTab" rel="test_nav">发票预开具</a></li>
+							<li><a href="/SKServer/resources/dwz/index.html" target="_blank">J-UI</a></li>
+							<li><a href="/SKServer/test/list.do" target="navTab" rel="test_nav">测试</a></li>
+							<li><a href="/SKServer/test/toUpload.do" width="470" height="180" target="dialog" rel="test_upload_dlg">测试上传文件</a></li>
+							<li><a href="/SKServer/sys/nsrxxwh.do" target="navTab" rel="nsrxxwh_nav">纳税人信息维护</a></li>
+							<li><a href="/SKServer/sys/fyxmxxwh.do" target="navTab" rel="fyxmxxwh_nav">增值税费用项目维护</a></li>
+							<li><a href="/SKServer/wsgp/init.do" target="navTab" rel="wsgp_nav">网上购票</a></li>
+							<li><a href="/SKServer/qycs/init.do" target="navTab" rel="qycs_nav">企业参数下载</a></li>
+						</ul>
+					</div>
+					-->
+                </div>
+            </div>
+        </div>
+        <div id="container" style="width: 1198px;">
+            <div id="navTab" class="tabsPage">
+                <div class="tabsPageHeader">
+                    <div class="tabsPageHeaderContent">
+                        <!-- 显示左右控制时添加 class="tabsPageHeaderMargin" -->
+                        <ul class="navTab-tab" style="left: 0px;">
+                            <li tabid="main" class="main selected"><a href="javascript:;"><span><span
+                                            class="home_icon">服务器信息</span></span></a></li>
+                        </ul>
+                    </div>
+                    <div class="tabsLeft" style="display: none;">left</div>
+                    <!-- 禁用只需要添加一个样式 class="tabsLeft tabsLeftDisabled" -->
+                    <div class="tabsRight" style="display: none;">right</div>
+                    <!-- 禁用只需要添加一个样式 class="tabsRight tabsRightDisabled" -->
+                    <div class="tabsMore">more</div>
+                </div>
+                <ul class="tabsMoreList">
+                    <li class="selected"><a href="javascript:;">服务器信息</a></li>
+                </ul>
+                <div class="navTab-panel tabsPageContent layoutBox" >
+                    <div class="page unitBox" style="display: block;">
+                        <div class="pageHeader" id="home_fwqxx">
+                            <div class="searchBar">
+                                <table class="searchContent">
+                                    <tbody>
+                                        <tr>
+                                            <td class="label_ar">名称：</td>
+                                            <td class="attr">全票种</td>
+                                            <td class="label_ar">机器编号：</td>
+                                            <td class="attr">499111003752</td>
+                                            <td class="label_ar">税务机关名称：</td>
+                                            <td class="attr">重庆市国家税务局分局</td>
+                                            <td class="label_ar">税务机关代码：</td>
+                                            <td class="attr">15000000012</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label_ar">主分机：</td>
+                                            <td class="attr">主机</td>
+                                            <td class="label_ar">版本号：</td>
+                                            <td class="attr">2601160429</td>
+                                            <td class="label_ar">纳税人识别号：</td>
+                                            <td class="attr">44001020458010000</td>
+                                            <td class="label_ar">纳税人名称：</td>
+                                            <td class="attr">百望测试028</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label_ar">型号：</td>
+                                            <td class="attr">TCG_01S5</td>
+                                            <td class="label_ar">IP地址：</td>
+                                            <td class="attr">119.131.210.74:12306</td>
+                                            <td class="label_ar">发票类型代码：</td>
+                                            <td class="attr">004,006,007,026,</td>
+                                            <td class="label_ar">特殊企业标识：</td>
+                                            <td class="attr">非特殊企业</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label_ar">启用时间：</td>
+                                            <td class="attr">20190415000000</td>
+                                            <td class="label_ar">农产品企业标识：</td>
+                                            <td class="attr">收购</td>
+                                            <td class="label_ar">铁路企业标识：</td>
+                                            <td class="attr">非铁路相关纳税人</td>
+                                            <td class="label_ar">纳税人性质：</td>
+                                            <td class="attr">一般纳税人</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label_ar">电子发票标识：</td>
+                                            <td class="attr">电子发票</td>
+                                            <td class="label_ar">稀土矿产品生产企业：</td>
+                                            <td class="attr">否</td>
+                                            <td class="label_ar">稀土冶炼分离企业：</td>
+                                            <td class="attr">否</td>
+                                            <td class="label_ar">稀土商贸企业：</td>
+                                            <td class="attr">否</td>
+                                        </tr>
+                                        <tr>
+                                            <td class="label_ar">石脑油企业：</td>
+                                            <td class="attr">否</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="tabs" currentindex="0" eventtype="click">
+                            <div class="tabsHeader">
+                                <div class="tabsHeaderContent">
+                                    <ul>
+                                        <li class="selected"><a href="javascript:;"><span>监控管理数据</span></a></li>
+                                        <li class=""><a href="javascript:;"><span>发票领购信息</span></a></li>
+                                        <li class=""><a href="javascript:;"><span>税种税目信息</span></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="tabsContent" layouth="98" style="height: 50px; overflow: auto;">
+                                <div class="pageContent" inited="1000" style="display: block;">
+                                    <div class="panelBar">
+                                        <ul class="toolBar">
+                                            <li><a id="jkglsj_list_index_btn" target="ajax" rel="jkglsj_list_index"
+                                                    href="/SKServer/fwqxx/jkglxx.do" class="add"> <span>查询</span>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <div id="jkglsj_list_index"></div>
+                                </div>
+                                <div style="display: none;">
+                                    <div class="pageContent">
+                                        <div class="panelBar">
+                                            <ul class="toolBar">
+                                                <li><a id="fplgxx_list_index_btn" target="ajax" rel="fplgxx_list_index"
+                                                        href="/SKServer/fwqxx/fplgxx.do" class="add"> <span>查询</span>
+                                                    </a></li>
+                                            </ul>
+                                        </div>
+                                        <div id="fplgxx_list_index"></div>
+                                    </div>
+                                </div>
+                                <div class="pageContent" style="display: none;">
+                                    <div class="panelBar">
+                                        <ul class="toolBar">
+                                            <li><a id="szsmxx_list_index_btn" target="ajax" rel="szsmxx_list_index"
+                                                    href="/SKServer/fwqxx/szsmxx.do" class="add"> <span>查询</span>
+                                                </a></li>
+                                        </ul>
+                                    </div>
+                                    <div id="szsmxx_list_index"></div>
+                                </div>
+                            </div>
+                            <div class="tabsFooter">
+                                <div class="tabsFooterContent"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="taskbar" style="left: 0px; display: none; top: 215px; width: 1413px;">
+            <div class="taskbarContent">
+                <ul></ul>
+            </div>
+            <div class="taskbarLeft taskbarLeftDisabled" style="display:none;">taskbarLeft</div>
+            <div class="taskbarRight" style="display:none;">taskbarRight</div>
+        </div>
+    </div>
+
+    <div id="footer">版权所有：&nbsp;&nbsp;&nbsp;&nbsp;国家信息安全工程技术研究中心 &nbsp;&nbsp;&nbsp;&nbsp;推荐使用IE6.0以上版本浏览器 1024x768以上分辨率
+    </div>
+    <div id="ajaxHidden">
+
+    </div>
+    <object id="signOCX" type="application/x-itst-activex" align="baseline" border="0" width="0" height="0" clsid="{D71CA6D9-E61D-4131-91AF-B4178C1067C6}"></object>
+    <object id="sk" type="application/x-itst-activex" align="baseline" border="0" width="0" height="0" clsid="{003BD8F2-A6C3-48EF-9B72-ECFD8FC4D49F}"></object>
+    <div id="splitBar" style="height: 155px;"></div>
+    <div id="splitBarProxy" style="height: 155px;"></div>
+
+    <!--拖动效果-->
+    <div class="resizable"></div>
+    <!--阴影-->
+    <div class="shadow" style="width:508px; top:148px; left:296px;">
+        <div class="shadow_h">
+            <div class="shadow_h_l"></div>
+            <div class="shadow_h_r"></div>
+            <div class="shadow_h_c"></div>
+        </div>
+        <div class="shadow_c">
+            <div class="shadow_c_l" style="height:296px;"></div>
+            <div class="shadow_c_r" style="height:296px;"></div>
+            <div class="shadow_c_c" style="height:296px;"></div>
+        </div>
+        <div class="shadow_f">
+            <div class="shadow_f_l"></div>
+            <div class="shadow_f_r"></div>
+            <div class="shadow_f_c"></div>
+        </div>
+    </div>
+    <!--遮盖屏幕-->
+    <div id="alertBackground" class="alertBackground"></div>
+    <div id="dialogBackground" class="dialogBackground"></div>
+
+    <div id="background" class="background" style="display: none;"></div>
+    <div id="progressBar" class="progressBar" style="display: none;">数据加载中，请稍等...</div>
+    <div id="contextmenu" style="display: none;"></div>
+    <div id="contextmenuShadow" style="display: none;"></div>
+</body>
+
+</html>
